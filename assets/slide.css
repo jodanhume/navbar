@@ -1,0 +1,28 @@
+.slider {
+  width: 100%;
+  margin: 0 auto;
+  z-index: 6; }
+
+.slick-slide {
+  margin: 0px; }
+
+.slick-slide img {
+  width: 100%;
+  height: 50vh;
+  background-color: #aaa; }
+
+.slick-prev:before,
+.slick-next:before {
+  color: black; }
+
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2; }
+
+.slick-active {
+  opacity: .5; }
+
+.slick-current {
+  opacity: 1; }
+
+/*# sourceMappingURL=slide.css.map */
