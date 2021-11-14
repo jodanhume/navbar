@@ -15,8 +15,7 @@
 
 .slick-prev:before,
 .slick-next:before {
-  color: #ccc;
-  font-size: 1.4rem; }
+  color: #ccc; }
 
 .slick-slide {
   transition: all ease-in-out .3s;
