@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/nav.css">
+    <title>네브바</title>
+</head>
+<body>
+<header>
+<h1>LOGO</h1>
+<nav class="nav">
+    <ul>
+        <li>
+            <h2><a href="">WEB</a></h2>
+            <ul>
+                <li><a href="">HTML</a></li>
+                <li><a href="">CSS</a></li>
+                <li><a href="">JavaScript</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h2><a href="">Design</a></h2>
+            <ul>
+                <li><a href="">Pigma</a></li>
+                <li><a href="">Photoshop</a></li>
+                <li><a href="">Illustrator</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <h2><a href="">Server</a></h2>
+            <ul>
+                <li><a href="">PHP</a></li>
+                <li><a href="">Mysql</a></li>
+                <li><a href="">Oracle</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<a href="" class="toggleBtn"><i class="bi bi-list"></i></a>
+<a href="" class="closeBtn"><i class="bi bi-x-lg"></i></a>
+</header>
+<main>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nulla natus dolore officiis? Maiores repellendus sed veniam ratione, reprehenderit voluptatibus autem libero repudiandae molestias beatae aliquam enim consectetur eius nulla?
+    </p>
+</main>
+<nav class="navBg"></nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script>
+$(function(){
+    $('.nav > ul > li > ul').hide();
+    var navBtn = $('.nav > ul > li');
+    var navLnb = $('.nav > ul > li > ul');
+    var navBg = $('.navBg');
+    navBtn.mouseenter(function(e){
+        e.preventDefault();
+        $(this).children('ul > li > ul').stop().slideDown();
+        navBg.stop().css({padding:'100px'});
+    })
+    navBtn.mouseleave(function(e){
+        e.preventDefault();
+        navLnb.stop().slideUp('fast');
+        navBg.stop().css({padding:'10px'});
+    })
+    var toggleBtn = $('.toggleBtn');
+    toggleBtn.click(function(e){
+        e.preventDefault();
+        $('.nav').slideToggle();
+        $('.toggleBtn').hide();
+        $('.closeBtn').show();
+    })
+
+})
+
+</script>
+</body>
+</html>
