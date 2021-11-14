@@ -11,7 +11,7 @@ $(function(){
     navBtn.mouseleave(function(e){
         e.preventDefault();
         navLnb.stop().slideUp('fast');
-        navBg.stop().css({padding:'200px'});
+        navBg.stop().css({padding:'10px'});
     })
     var toggleBtn = $('.toggleBtn');
     toggleBtn.click(function(e){
