@@ -1,0 +1,96 @@
+@charset 'utf-8';
+*{box-sizing: border-box; margin:0;padding:0;}
+ul,li {list-style: none;padding:0;}
+a, a:active, a:visited {text-decoration: none; color: #222;}
+h1 {font-size: 18px;} h2 {font-size: 16px;}
+body {background: #f1f1f1;}
+header {
+    padding: 1rem;
+    position: fixed; z-index: 10;
+    display: flex; left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    width: 1200px;
+    @media (max-width:1200px) {width: 100%;}
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    nav {
+        display: flex;
+        ul {
+            h2 {padding: 0 1rem; text-align: center;}
+            li {
+                width: 100px;
+                ul {
+                    // display: none;
+                    text-align: center;
+                    padding-top: 8px;
+                    li {
+                        padding: 8px 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+.navBg {
+    position: fixed; z-index: 9; left: 0; top: 0;
+    background: #f9f9f9;
+    height: 56px;
+    width: 100%;
+    padding:1rem;
+    transition: all .5s;
+}
+
+@media (min-width:640px) {
+    .toggleBtn, .closeBtn {
+        display: none;
+        padding: 0;
+    }
+}
+@media (max-width:640px) {
+    .toggleBtn {
+        display: block;
+        font-size: 16px;
+        padding: 0;
+        position: relative;
+        i {
+            position: absolute;
+            right: 10%; top: -5px;
+            font-size: 24px;
+        }
+    }
+    .closeBtn {
+        display: none;
+    }
+    header {
+        nav {
+            margin-top: 56px;
+            display: none;
+            border-left: 1px solid #ddd;
+            flex-direction: column;
+            ul {
+                h2 {
+                    text-align-last: left;
+                    padding-top: 8px;
+                }
+                li {
+                    ul {
+                        li {
+                            text-align-last: left;
+                            border-top: 1px solid #ddd;
+                            &:last-child {
+                                border-bottom: 1px solid #ddd;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+main {
+    padding-top: 70px;
+}
