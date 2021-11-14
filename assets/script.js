@@ -7,11 +7,13 @@ $(function(){
         e.preventDefault();
         $(this).children('ul > li > ul').stop().slideDown();
         navBg.stop().css({padding:'200px'});
+        $('.headerBg').css({display:'none'});
     })
     navBtn.mouseleave(function(e){
         e.preventDefault();
         navLnb.stop().slideUp('fast');
         navBg.stop().css({padding:'10px'});
+        
     })
     var toggleBtn = $('.toggleBtn');
     toggleBtn.click(function(e){

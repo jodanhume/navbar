@@ -6,12 +6,19 @@
 
 .slick-slide {
     margin: 0px;
+    // width: cover;
+    height: cover;
+    position: relative;
+    overflow: hidden;
 }
 
 .slick-slide img {
-    width: 100%;
-    height: 50vh;
     background-color: #aaa;
+    position: relative;
+    @media (max-width:640px) {
+        right: 150%;
+    }
+    
 }
 
 .slick-prev:before,
