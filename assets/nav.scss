@@ -29,14 +29,27 @@ header {
         ul {
             h2 {padding: 0 1rem; text-align: center;}
             li {
+                position: relative;
+                transition: all .4s;
                 width: 100px;
+                &:hover:before {
+                    content:'';
+                    
+                }
+                
                 ul {
                     text-align: center;
                     padding-top: 8px;
                     li {
                         padding: 8px 12px;
                         a {
+                            text-align: center;
                             color: #ddd !important;
+                            transition: all .4s;
+                            &:hover {
+                                text-decoration: underline;
+                                color: tomato !important;
+                            }
                         }
                     }
                 }
