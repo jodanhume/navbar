@@ -12,9 +12,6 @@
 .slick-slide img {
   background-color: #aaa;
   position: relative; }
-  @media (max-width: 640px) {
-    .slick-slide img {
-      right: 150%; } }
 
 .slick-prev:before,
 .slick-next:before {
